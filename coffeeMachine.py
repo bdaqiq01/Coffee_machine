@@ -1,6 +1,17 @@
 """
-This programs
+Coffee Machine Class
+
+This script defines a CoffeeMachine class that simulates a simple coffee vending machine.
+The class can optionally be initialized with specified amounts of water, coffee, and milk.
+ It includes the following key features:
+
+1. Ingredient Check: Ensures there are enough ingredients (water, coffee, and milk) to make a cup of coffee.
+2. Make Coffee: Prompts the user to insert dollar bills and change.
+ If sufficient funds are provided, it makes a cup of coffee, deducts the used ingredients, and returns any excess change.
+  If funds are insufficient, it notifies the user.
+3. if the user enters coffee close, or if it doesnt want another coffee the machine closes.
 """
+
 
 
 class CoffeeMachine:
@@ -44,8 +55,6 @@ class CoffeeMachine:
         return f'milk: {self.milk}, water: {self.water}, coffee: {self.coffee}'
 
 
-#TODO: make it too keep asking until it is off
-
 coffee_price = 2.5
 myCoffeeMachine = CoffeeMachine()
 
@@ -57,8 +66,3 @@ while coffee_shop == 'open':
     if another_order == 'close' or another_order == 'no':
         coffee_shop = 'close'
 
-
-
-#assert myCoffeeMachine.make_coffee() == 'Here is your coffee, Enjoy', 'could not make your coffee, sorry'
-#assert myCoffeeMachine.make_coffee() == 'Not enough water', 'ingredient problems'
-#assert myCoffeeMachine.machine_status() == 'milk: 5, water: 0, coffee: 0', 'status problem'
